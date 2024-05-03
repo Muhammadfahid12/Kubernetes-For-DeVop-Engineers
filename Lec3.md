@@ -1,31 +1,20 @@
 ## K8s Master Node Components
 
-# Api Server:
+1. **Api Server**:
 
-                Primary Component and responsible for orchestrating all operations (scaling, updates and so on) in the cluster. It also acts as gateway to the cluster. It must be accessible from clients from outside the cluster with cluster integrations with CLI and GUI.
+                Primary Component and responsible for orchestrating all operations (scaling, updates and so on) in the cluster. It also acts as gateway to the cluster. It must be accessible from clients from outside the cluster with cluster integrations with CLI and GUI.Act as Frontend of K8s.
 
-# Controller Manager:
-
-                    Engine that runs the control loops, create prods, watches the state
-                    of cluster.make changes to drive status toward the desired state.
-
-# Replication Controller:
-
-                    Ensures that specific number of pod replicas are running at one time. made sure that pod is up and running.
-
-# Node Controller:
-
-                    master component which manage various aspects of nodes.
-
-# Scheduler:
-
-                Identify the right node to place a container on based resource limitations or guarantees, taints , tolerations and affinity/ anti-affinity
-                role.
-
-# etcd cluster:
+2. **etcd**:
 
                 etcd database stores the state of the cluster, incuding node and work laod information in key/value format.
+  
 
-# Add-ons:
+3. **Controller**:
+                    Brain behind orchestration. responsible for noticing and responding when node containers or endpoint goes down.They bring decision to bring up new containers in such cases.
+                    
 
-            DNS: All k8s clusters should have cluster DNS. DNS in Kubernetes clusters facilitates service discovery, dynamic scaling, and load balancing, improving the efficiency and reliability of communication between components.
+4. **Scheduler**:
+
+                Responsible to distributing container to mulitple nodes on based resource limitations or guarantees, taints , tolerations and affinity/ anti-affinity
+                role.
+
