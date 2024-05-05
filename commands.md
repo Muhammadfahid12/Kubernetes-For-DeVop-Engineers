@@ -4,3 +4,4 @@
  kubectl get node
  kubectl describe pod nginx
  kubectl replace -f replicaset-defintion
+ kubectl edit replicaset replicaset_definition **it will opens up running configuration in text editor snd we can change in running replicaset**

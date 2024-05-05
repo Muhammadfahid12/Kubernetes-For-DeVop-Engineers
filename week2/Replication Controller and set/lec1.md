@@ -11,3 +11,6 @@ There are two terms are used for replication
 2. Replica Set (New and Recommended)
 
 **Replication Controller** : 
+
+
+**Replicaset** : It won't create more than defined number of replicas, I mean if my original pod have same label as my replicaset, my pod won't be running bcz with same label, my desired number of replicaset pods are working.
